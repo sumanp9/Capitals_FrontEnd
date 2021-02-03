@@ -1,1 +1,5 @@
-<button mat-button (click)="showAllCountries()">Show All Countries</button>
+<mat-slide-toggle (click)="showAllCountries()" >Show All Countries</mat-slide-toggle>
+
+<div *ngIf="listOfCountries && isActive">
+  <li *ngFor="let country of listOfCountries; index as i ">{{country}}</li>
+</div>
